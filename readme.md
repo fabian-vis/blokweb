@@ -60,12 +60,12 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Je focus:** -responsive-
 
-**Je opdracht:** -bol.com/nl/-
+**Je opdracht:** -https://www.apple.com/nl/-
 
 **Screenshot(s):**
 
-![screenshot(s) die een goed beeld geven van de website die je gaat maken](images/bol.com.png)
+![screenshot(s) die een goed beeld geven van de website die je gaat maken](images/apple.png)
 
 **Breakdown-schets(en):**
 
-![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/bolschets.png)
+![-voorlopige breakdownschets(en) van een of beide pagina's van de site die je gaat maken-](images/breakdownschets.png)
