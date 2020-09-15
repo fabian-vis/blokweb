@@ -6,13 +6,32 @@ body {
 
   margin: 0 auto;
 }
+
+
+header section{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  z-index: 10;
+  transition: height 0.8s ease-in-out;
+}
+
+header section li{
+  flex-grow:1;
+  list-style-type: none;
+}
+.toonMenu {
+  transform:translateY(0%);
+}
 nav a {
   display:block;
   text-decoration:none;
 
 }
 nav ul {
-  background-color: grey;
+  background-color: #1d1d1f;
   margin:0; padding: 0;
   height: 5vh;
   width: 100%;
@@ -38,7 +57,7 @@ nav img {
 
 
 
-section:first-of-type {
+main section:first-of-type {
   background-color: #131313;
   height: 25vh;
   width: 100%;
@@ -52,7 +71,7 @@ section:first-of-type {
 
 }
 
-section:first-of-type h2{
+main section:first-of-type h2{
   margin: 0px;
   line-height: 1.125em;
   font-size: 2em;
@@ -61,7 +80,7 @@ section:first-of-type h2{
   font-weight: 600;
   letter-spacing: .004em;
 }
-section:first-of-type h3{
+main section:first-of-type h3{
   margin: 0;
   line-height: 1.4211em;
   font-size: 1.1em;
@@ -70,8 +89,9 @@ section:first-of-type h3{
   font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
   font-weight: 400;
   letter-spacing: .012em;
+  width: 60%;
 }
-section:first-of-type p{
+main section:first-of-type p{
  margin-top: 0.4em;
  margin-left: auto;
  margin-right: auto;
@@ -83,10 +103,11 @@ section:first-of-type p{
     font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
-section:first-of-type a{
+main section:first-of-type a{
   color: #2997ff;
   text-decoration: none;
   font-size: 1.1em;
+
     line-height: 1.21053;
     font-weight: 400;
     letter-spacing: .012em;
@@ -94,11 +115,11 @@ section:first-of-type a{
 }
 
 
-section:nth-of-type(2) img{
+main section:nth-of-type(2) img{
   width: 100%;
   height: 40vh;
 }
-section:nth-of-type(3) {
+main section:nth-of-type(3) {
   background-color: #fafafa;
   height: 25vh;
   width: 100%;
@@ -110,7 +131,7 @@ section:nth-of-type(3) {
   text-align: center;
 }
 
-section:nth-of-type(3) h2{
+main section:nth-of-type(3) h2{
   margin: 0px;
   line-height: 1.125em;
   font-size: 2em;
@@ -119,7 +140,7 @@ section:nth-of-type(3) h2{
   font-weight: 600;
   letter-spacing: .004em;
 }
-section:nth-of-type(3) h3{
+main section:nth-of-type(3) h3{
   display: block;
   margin: 0;
   line-height: 1.4211em;
@@ -130,29 +151,59 @@ section:nth-of-type(3) h3{
   font-weight: 400;
   letter-spacing: .012em;
 }
-section:nth-of-type(3) p{
+main section:nth-of-type(3) p{
  margin-top: 0.4em;
  margin-left: auto;
  margin-right: auto;
  color: #86868b;
  font-size: 0.9em;
-    line-height: 1.42859;
-    font-weight: 400;
-    letter-spacing: -.016em;
-    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  line-height: 1.42859;
+  font-weight: 400;
+  letter-spacing: -.016em;
+  font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
-section:nth-of-type(3) a{
+main section:nth-of-type(3) a{
   color: #2997ff;
   text-decoration: none;
   padding: 0 1em 0 1em;
   font-size: 1.1em;
-    line-height: 1.21053;
-    font-weight: 400;
-    letter-spacing: .012em;
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  line-height: 1.21053;
+  font-weight: 400;
+  letter-spacing: .012em;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
-section:nth-of-type(4) img{
+main section:nth-of-type(4) img{
   width: 100%;
   height: 25vh;
+}
+
+.column {
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+}
+
+.column section:nth-of-type(1) {
+  height: 25vh;
+  width: 100%;
+  padding-top: 1.5em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.column section:nth-of-type(2) {
+  height: 25vh;
+  width: 100%;
+  padding-top: 1.5em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-size: contain;
+  background-repeat: no-repeat;:
 }
