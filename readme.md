@@ -38,7 +38,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Stand van zaken
 
--dit ging goed & dit was lastig-
+-Ik vond het lastig om weer op te starten met coderen. Het ging aan in het begin sloom maar naarmate ik bezig was ging het was sneller. Het hamburgermenu maken bijvoorbeeld was aardig lastig maar met wat hulp ben ik er gekomen. Verder is het gewoon veel herhalen.-
 
 **Screenshot(s):**
 

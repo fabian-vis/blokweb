@@ -17,7 +17,7 @@ header {
   z-index: 10;
 }
 
-header ul {
+header ul:first-of-type {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -58,7 +58,7 @@ header ul li:nth-of-type(2) img {
 }
 
 header ul li:nth-of-type(3) img {
-  width: 5.6em;
+  width: 1.2em;
 }
 
 /* hamburger menu met transform naar kruis */
@@ -113,6 +113,30 @@ top: -0.3em;
   width: 1.4em;
   transition: 0.5s;
   top: -0.3em;
+}
+/* klapmenu aanmaken */
+.klapmenuweg {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #00000010;
+  transition: .2s;
+  transform: translateY(-100%);
+}
+
+.klapmenuzien {
+  transition: .2s;
+  background-color: #000000;
+  transform: translateY(2.5em);
+}
+
+.klapmenuzien p {
+  color:white;
+  margin-left: 2em;
 }
 
 main section:first-of-type {
