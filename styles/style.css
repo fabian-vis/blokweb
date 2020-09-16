@@ -6,56 +6,114 @@ body {
 
   margin: 0 auto;
 }
-
-
-header section{
-  display: flex;
-  width: 100%;
-  height: 100vh;
+header {
+  position: sticky;
   background-color: black;
-  color: white;
-  z-index: 10;
-  transition: height 0.8s ease-in-out;
-}
-
-header section li{
-  flex-grow:1;
-  list-style-type: none;
-}
-.toonMenu {
-  transform:translateY(0%);
-}
-nav a {
-  display:block;
-  text-decoration:none;
-
-}
-nav ul {
-  background-color: #1d1d1f;
-  margin:0; padding: 0;
-  height: 5vh;
-  width: 100%;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-nav li  {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.5em;
   margin: 0;
-  padding: 0;
-  background-color: green;
-}
-nav li a {
- text-align: center;
- padding-top: .4em;
-}
-nav img {
-  width: 1em;
-  height: 1.5em;
+  z-index: 10;
 }
 
+header ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.5em;
+}
 
+header ul li:first-of-type {
+  margin-left: -2em;
+}
+
+header ul li:nth-of-type(2){
+  color: white;
+  list-style-type: none;
+}
+
+header ul li:nth-of-type(3){
+  color: white;
+  list-style-type: none;
+  margin: 0 0.7em 0em 0em;
+}
+
+header ul li {
+  color: white;
+  list-style-type: none;
+}
+
+header ul li:first-of-type img {
+  width: 2.5em;
+  border-radius: 50%;
+}
+
+header ul li:nth-of-type(2) img {
+  width: 1.2em;
+}
+
+header ul li:nth-of-type(3) img {
+  width: 5.6em;
+}
+
+/* hamburger menu met transform naar kruis */
+
+#hamburgermenu {
+  z-index: 50;
+  height: 0.3em;
+  width: 1.7em;
+  position: absolute;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/* eerste streep van hamburger menu positioneren */
+
+.burger1 {
+  top: -0.7em;
+  position: absolute;
+  background-color: white;
+  height: 0.15em;
+  width: 1.4em;
+  transition: 0.5s;
+
+}
+/* kruis class die door javascript wordt aangeroepen */
+.burger1kruis {
+transform: rotate(-50deg); /* rotate om het kruisje te vormen */
+position: absolute;
+background-color: white;
+height: 0.15em;
+width: 1.4em;
+transition: 0.5s; /* zodat het niet instant is, Lelijk */
+top: -0.3em;
+
+}
+/* tweede streep van hamburger menu positioneren */
+.burger2 {
+  top: 0.2em;
+  position: absolute;
+  background-color: white;
+  height: 0.15em;
+  width: 1.4em;
+  transition: 0.5s;
+}
+/* kruis class die door javascript wordt aangeroepen */
+.burger2kruis {
+  transform: rotate(50deg);
+  position: absolute;
+  background-color: white;
+  height: 0.15em;
+  width: 1.4em;
+  transition: 0.5s;
+  top: -0.3em;
+}
 
 main section:first-of-type {
   background-color: #131313;
@@ -67,8 +125,6 @@ main section:first-of-type {
   align-items: center;
   flex-direction: column;
   text-align: center;
-
-
 }
 
 main section:first-of-type h2{

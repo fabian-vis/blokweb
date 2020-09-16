@@ -1,9 +1,12 @@
 
-var deButton = document.querySelector("menu");
 
-function doeFormNeerEnOp(){
-	let hetFormulier = document.querySelector("onzichtbaar");
-	hetFormulier.classList.toggle("toonMenu");
+var burger1 = document.querySelector('#burger1');
+var burger2 = document.querySelector('#burger2');
+var burgermenu = document.querySelector('#hamburgermenu');
+
+function burgerMenuKlikken() {
+  burger1.classList.toggle('burger1kruis');
+  burger2.classList.toggle('burger2kruis');
 }
 
-deButton.addEventListener("click", doeFormNeerEnOp);
+burgermenu.addEventListener("click", burgerMenuKlikken);
