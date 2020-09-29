@@ -1,70 +1,135 @@
 <!doctype html>
-<html lang="nl">
-
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="author" content="Fabian Vis">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<title>Apple</title>
-
 	<link href="styles/style.css" rel="stylesheet">
 </head>
-
 <body>
 	<header>
 		<ul>
 			<li>
-				<button id="hamburgermenu">
+				<button id="hamburgermenu" aria-label="menu">
 					<div id="burger1" class="burger1"></div>
 					<div id="burger2" class="burger2"></div>
 				</button>
 			</li>
 			<li>
-				<img src="images/applelogo.png">
+				<img src="images/applelogo.png" alt="naar home"> <!-- apple logo link?-->
 			</li>
 			<li>
-				<img src="images/cart.svg">
+				<img src="images/cart.svg" alt="naar winkelwagen">
 			</li>
 		</ul>
 		 <nav id="schuifmenu" class="klapmenuweg">
-			<p>menu2</p>
-			<p>menu2</p>
+			 <form>
+					<input type="search" aria-label="zoeken"><button type="submit">zoeken</button>
+			 </form>
+			 <ul>
+				 <li>menu1</li>
+				 <li>menu1</li>
+				 <li>menu1</li>
+				 <li>menu1</li>
+			 </ul>
 		</nav>
 	</header>
 	<main>
+
 	<section>
-			<h2>iPhone SE</h2>
-			<h3> Lots to love. Less to spend. Starting at $399. </h3>
+			<h1>iPhone SE</h1> <!-- h1 -->
+			<h2> Lots to love. Less to spend. Starting at $399. </h2><!-- h2-->
 			<p> From $9.54/mo. or $299 with trade-in. </p>
 			<a href="page1">Learn more ></a><a href="page2">Buy ></a>
 	</section>
+
+	<div class="fotos">
+		<img src="images/iphonemobilehero.jpg" class="mobilefoto"/>
+		<img src="images/iphonedesktop.jpg" class="desktopfoto" />
+	</div>
+
 	<section>
-		<img src="images/iphonemobilehero.jpg">
-	</section>
-	<section>
-			<h2>iPhone 11</h2>
-			<h3> Just the right amount of everything. </h3>
+			<h1>iPhone 11</h1>
+			<h2> Just the right amount of everything. </h2>
 			<p> From $19.95/mo. or $479 with trade-in. </p>
 			<a href="page1">Learn more ></a><a href="page2">Buy ></a>
 	</section>
+
 	<section>
 		<img src="images/iphone11.jpg">
 	</section>
-	<div class="column">
-		<section>
-				<h2>iPad Pro</h2>
-				<h3> Your next computer is not a computer </h3>
-				<a href="page1">Learn more ></a><a href="page2">Buy ></a>
-		</section>
-		<section>
-				<h2>iPad Pro</h2>
-				<h3> Your next computer is not a computer </h3>
-				<a href="page1">Learn more ></a><a href="page2">Buy ></a>
-		</section>
-	</div>
-	<script src="scripts/script.js"></script>
+
+	<div class='wrapper'>
+  <div class='row'>
+    <div class='column1'>
+      <div class='appleevent'>
+        <h1>Apple Event</h1>
+				<h2>Watch the event on 9/15 at 10 a.m. PDT.</h2>
+				<a href="page1">Learn more ></a>
+      </div>
+			<figure>
+				<img src="images/Appleevent.jpg">
+			</figure>
+    </div>
+
+    <div class='column2'>
+      <div class='airpods'>
+				<h1>Buy a Mac or iPad for college. Get AirPods.</h1>
+				<a href="page1">Shop ></a>
+			</div>
+			<figure>
+				<img src="images/Airpods.jpg">
+			</figure>
+      </div>
+    </div>
+  </div>
+</div>
+
 </main>
+<footer>
+	<ul>
+		<li>
+		<button type="button" class="collapsible">Shop and Learn</button>
+			<div class="content">
+  			<a href="page1">Mac</a>
+				<a href="page1">iPad</a>
+				<a href="page1">iPhone11</a>
+				<a href="page1">Watch</a>
+				<a href="page1">TV</a>
+				<a href="page1">Music</a>
+				<a href="page1">AirPods</a>
+				<a href="page1">HomePod</a>
+				<a href="page1">iPod touch</a>
+				<a href="page1">Accessories</a>
+				<a href="page1">Gift Cards</a>
+			</div>
+		</li>
+		<li>
+		<button type="button" class="collapsible">Services</button>
+			<div class="content">
+				<a href="page1">Apple Music</a>
+				<a href="page1">Apple News+</a>
+				<a href="page1">Apple TV+</a>
+				<a href="page1">Apple Arcade</a>
+				<a href="page1">Apple Books</a>
+				<a href="page1">Apple Card</a>
+				<a href="page1">iCloud</a>
+			</div>
+		</li>
+		<li>
+		<button type="button" class="collapsible">Account</button>
+			<div class="content">
+				<a href="page1">Manage Your Apple ID</a>
+				<a href="page1">Apple Store Account</a>
+				<a href="page1">iCloud.com</a>
+			</div>
+		</li>
+		<p>More ways to shop: Find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE.</p>
+	</ul>
+	
+</footer>
+<script src="scripts/script.js"></script>
 </body>
 
 </html>
