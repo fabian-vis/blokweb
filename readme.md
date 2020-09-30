@@ -39,7 +39,11 @@ vrij goed kunnen coderen. Ik probeer mijn versie dan zoveel mogelijk op het orig
 
 
 **Screenshot(s):**
-
+![-Screenshots van de website op mobiel en desktop-](images/screenshot1.png)
+![-Screenshots van de website op mobiel en desktop-](images/screenshot2.png)
+![-Screenshots van de website op mobiel en desktop-](images/screenshot3.png)
+![-Screenshots van de website op mobiel en desktop-](images/screenshot4.png)
+![-Screenshots van de website op mobiel en desktop-](images/screenshot5.png)
 
 ## Voortgang 1 (week 3)
 
@@ -49,11 +53,7 @@ vrij goed kunnen coderen. Ik probeer mijn versie dan zoveel mogelijk op het orig
 
 **Screenshot(s):**
 
-![-Screenshots van de website op mobiel en desktop-](images/screenshot1.png)
-![-Screenshots van de website op mobiel en desktop-](images/screenshot2.png)
-![-Screenshots van de website op mobiel en desktop-](images/screenshot3.png)
-![-Screenshots van de website op mobiel en desktop-](images/screenshot4.png)
-![-Screenshots van de website op mobiel en desktop-](images/screenshot5.png)
+
 
 ### Agenda voor meeting
 
