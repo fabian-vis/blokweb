@@ -34,9 +34,10 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 -Ik moet nogsteeds veel googlen wat veel tijd kost. Ik heb wel het gevoel dat het steeds
 beter gaat. Ik zit soms wel vast met een aantal punten omdat apple gecodeerd is door mensen die
-vrij goed kunnen coderen. Ik probeer mijn versie dan zoveel mogelijk op het origineel te laten lijken maar dat lukt dus niet altijd. Verder ben ik aardig trots op hoe het mij gelukt is de website responsive te maken.
+vrij goed kunnen coderen. Ik probeer mijn versie dan zoveel mogelijk op het origineel te laten lijken maar dat lukt dus niet altijd. Verder ben ik aardig trots op hoe het mij gelukt is de website responsive te maken.-
 ### Agenda voor meeting
-
+-Fabian
+Het lukt mij niet om de twee atjes op de homepagina naast elkaar te zetten. Dit wil ik graag bespreken.-
 
 **Screenshot(s):**
 ![-Screenshots van de website op mobiel en desktop-](images/screenshot1.png)
