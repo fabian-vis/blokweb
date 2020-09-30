@@ -30,8 +30,15 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Voortgang 2 (week 5)
 
--same as voortgang 1-
+### Stand van zaken
 
+-Ik moet nogsteeds veel googlen wat veel tijd kost. Ik heb wel het gevoel dat het steeds
+beter gaat. Ik zit soms wel vast met een aantal punten omdat apple gecodeerd is door mensen die
+vrij goed kunnen coderen. Ik probeer mijn versie dan zoveel mogelijk op het origineel te laten lijken maar dat lukt dus niet altijd. Verder ben ik aardig trots op hoe het mij gelukt is de website responsive te maken.
+### Agenda voor meeting
+
+
+**Screenshot(s):**
 
 
 ## Voortgang 1 (week 3)
@@ -42,7 +49,11 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Screenshot(s):**
 
--screenshot(s) van hoe ver je bent-
+![-Screenshots van de website op mobiel en desktop-](images/screenshot1.png)
+![-Screenshots van de website op mobiel en desktop-](images/screenshot2.png)
+![-Screenshots van de website op mobiel en desktop-](images/screenshot3.png)
+![-Screenshots van de website op mobiel en desktop-](images/screenshot4.png)
+![-Screenshots van de website op mobiel en desktop-](images/screenshot5.png)
 
 ### Agenda voor meeting
 
@@ -50,7 +61,9 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Verslag van meeting
 
--na afloop snel uitkomsten vastleggen-
+-Ik heb veel feedback gekregen over de accessability van voor mensen met screenreaders.
+Dit heb ik verbeterd in mijn werk. Verder wat kleine schoonheids foutjes bij de HTML en CSS maar
+over het algemeen was mijn code goed.-
 
 
 
