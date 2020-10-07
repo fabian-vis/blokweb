@@ -175,9 +175,9 @@ main section:first-of-type p{
  margin-right: auto;
  color: #86868b;
  font-size: 0.9em;
-    line-height: 1.42859;
-    font-weight: 400;
-    letter-spacing: -.016em;
+ line-height: 1.42859;
+ font-weight: 400;
+ letter-spacing: -.016em;
 }
 
 main section:first-of-type a{
@@ -187,6 +187,24 @@ main section:first-of-type a{
   line-height: 1.21053;
   font-weight: 400;
   letter-spacing: .012em;
+}
+.linkjes {
+  display: flex;
+  width: 100%;
+}
+.link1 {
+  flex: 1;
+}
+.link2 {
+  flex: 1;
+}
+.link2 a {
+  float: left;
+  padding-left: 2em;
+}
+
+.link1 a {
+  float: right;
 }
 
 .fotos{
@@ -371,23 +389,6 @@ main section:nth-of-type(3) img{
   font-weight: 400;
   letter-spacing: .012em;
 }
-/* header ul {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header ul li:first-of-type {
-  margin-left: -2em;
-  list-style-type: none;
-}
-
-header ul li:nth-of-type(2){
-  color: white;
-  list-style-type: none;
-}
-*/
  footer{
  margin: 0 auto;
 }
@@ -410,17 +411,15 @@ footer li {
 footer p {
   font-size: 0.8em;
 }
-/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_symbol */
-/* ik heb het natuurlijk wel zelf vormgegeven */
 .collapsible {
   color: black;
   cursor: pointer;
-  padding: 0.5em;
+  padding: 1em 0 1em 0;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 0.9em;
+  font-size: 0.8em;
   border-bottom: 1px solid #d2d2d7;
 }
 
@@ -433,22 +432,72 @@ footer p {
 }
 
 .active:after {
-  content: "\2212";
+  content: '\2715';
 }
 
 .content {
-  padding: 0 1em;
+  padding: 0 0.5em;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.3s ease-out;
   border-bottom: 1px solid #d2d2d7;
 }
-/* tot hier */
 .content a {
-  padding: 0.5em 0.9em;
   display: block;
-  font-size: 0.9em;
+  font-size: 0.75em;
   text-decoration: none;
+  color:#515154;
+  padding: 0.5em 0 0.5em 0;
+}
+
+.wrapper2 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 3em 2em 2em 1.5em 1.5em;
+}
+.wrapper2 p {
+  color:#515154;
+}
+.wrapper2 a {
+  color:#515154;
+  text-decoration: none;
+  font-size: 0.8em;
+  border-right: 1px solid #515154;
+  padding-right: 0.5em;
+
+}
+.one {
+  grid-column: 1 / 9;
+  grid-row: 1;
+}
+.two {
+  grid-column: 1 / 9;
+  grid-row: 2;
+}
+.three {
+  grid-column: 1 / 9;
+  grid-row: 3;
+}
+.four {
+  grid-column:1 / 4 ;
+  grid-row: 4;
+}
+.five {
+  grid-column: 3 / 5;
+  grid-row: 4;
+}
+.six {
+  grid-column: 5 / 8;
+  grid-row: 4;
+}
+.seven {
+  grid-row: 5;
+  grid-column: 1 / 3;
+
+}
+.eight {
+  grid-row: 5;
+  grid-column: 3 / 5;
 }
 
 @media screen and (min-width: 736px) {
@@ -473,5 +522,39 @@ footer p {
   .fotos img:nth-of-type(2){
 
     display: block;
+  }
+  .one {
+    grid-column: 1 / 9;
+    grid-row: 1;
+  }
+  .two {
+    grid-column: 8 / 9;
+    grid-row: 2;
+    text-align: right;
+  }
+  .three {
+    grid-column: 1 / 8;
+    grid-row: 2;
+  }
+  .four {
+    grid-column:1 / 2 ;
+    grid-row: 3;
+  }
+  .five {
+    grid-column: 2 / 3;
+    grid-row: 3;
+  }
+  .six {
+    grid-column: 3 / 4;
+    grid-row: 3;
+  }
+  .seven {
+    grid-row: 3;
+    grid-column: 4 / 5;
+
+  }
+  .eight {
+    grid-row: 3;
+    grid-column: 5 / 6;
   }
 }

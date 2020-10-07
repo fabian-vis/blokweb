@@ -24,9 +24,19 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Voortgang 3 (week 6)
 
--same as voortgang 1-
+### Stand van zaken
 
+-Ik begin er nu lekker in te komen. Ik heb nog wat tutorials over grid en flexbox gekeken en die hebben mij aardig geholpen. Ik loop nog tegen een aantal problemen op maar die wil ik in mijn agenda bespreken-
+### Agenda voor meeting
+-Fabian
+Bij de footer heb ik gebruik gemaakt van grid maar het loopt nog niet helemaal lekker. Ik zou graag een stapje in de goeie richting willen krijgen.
 
+Bij de tweede pagina snijd de afbeelding af als hij kleiner wordt. Hoe krijg ik dit voormekaar? Ook springt de text bij de header in desktop versie in het plaatje in plaats van onder het plaatje.-
+
+**Screenshot(s):**
+![-Screenshots van de website op mobiel en desktop-](images/screenshot6.png)
+![-Screenshots van de website op mobiel en desktop-](images/screenshot7.png)
+![-Screenshots van de website op mobiel en desktop-](images/screenshot8.png)
 
 ## Voortgang 2 (week 5)
 

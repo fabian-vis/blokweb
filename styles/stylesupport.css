@@ -1,0 +1,353 @@
+/* CSS Document */
+*, *::after, *::before {
+  box-sizing:border-box;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+body {
+
+  margin: 0 auto;
+}
+header {
+  position: sticky;
+  background-color: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.5em;
+  margin: 0;
+  z-index: 100;
+}
+
+header ul:first-of-type {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.5em;
+}
+
+header ul li:first-of-type {
+  margin-left: -2em;
+}
+
+header ul li:nth-of-type(2){
+  color: white;
+  list-style-type: none;
+}
+
+header ul li:nth-of-type(3){
+  color: white;
+  list-style-type: none;
+  margin: 0 0.7em 0em 0em;
+}
+
+header ul li {
+  color: white;
+  list-style-type: none;
+}
+
+header ul li:first-of-type img {
+  width: 2.5em;
+  border-radius: 50%;
+}
+
+header ul li:nth-of-type(2) img {
+  width: 1.2em;
+}
+
+header ul li:nth-of-type(3) img {
+  width: 1.2em;
+}
+
+
+
+/* hamburger menu met transform naar kruis */
+
+#hamburgermenu {
+  z-index: 50;
+  height: 0.3em;
+  width: 1.7em;
+  position: absolute;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/* eerste streep van hamburger menu positioneren */
+
+.burger1 {
+  top: -0.7em;
+  position: absolute;
+  background-color: white;
+  height: 0.15em;
+  width: 1.4em;
+  transition: 0.5s;
+
+}
+/* kruis class die door javascript wordt aangeroepen */
+.burger1kruis {
+transform: rotate(-50deg); /* rotate om het kruisje te vormen */
+position: absolute;
+background-color: white;
+height: 0.15em;
+width: 1.4em;
+transition: 0.5s; /* zodat het niet instant is, Lelijk */
+top: -0.3em;
+
+}
+/* tweede streep van hamburger menu positioneren */
+.burger2 {
+  top: 0.2em;
+  position: absolute;
+  background-color: white;
+  height: 0.15em;
+  width: 1.4em;
+  transition: 0.5s;
+}
+/* kruis class die door javascript wordt aangeroepen */
+.burger2kruis {
+  transform: rotate(50deg);
+  position: absolute;
+  background-color: white;
+  height: 0.15em;
+  width: 1.4em;
+  transition: 0.5s;
+  top: -0.3em;
+}
+/* klapmenu aanmaken */
+.klapmenuweg {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #00000010;
+  transition: .2s;
+  transform: translateY(-100%);
+}
+
+.klapmenuzien {
+  transition: .2s;
+  background-color: #000000;
+  transform: translateY(2.5em);
+}
+
+/* hier alle sections */
+main section:first-of-type img{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+main section:nth-of-type(2)  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* icon sections */
+main section:nth-of-type(3) ul {
+  list-style:none;
+  margin:0; padding:0 2em 2em;
+  display:grid;
+  grid-gap:2em;
+  grid-template-columns: repeat( 2, minmax(7em, 1fr) );
+}
+
+main section:nth-of-type(3) li {
+  padding: 1em;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  align-items: center;
+}
+main section:nth-of-type(3) img {
+  display:block;
+  width:4.250em;
+  height:auto;
+}
+main section:nth-of-type(3) h1 {
+  font-size: 1em;
+}
+ footer{
+ margin: 0 auto;
+}
+
+footer ul {
+  background-color: #f5f5f7;
+  padding-right: 1em;
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+footer li {
+  margin: 0;
+  list-style-type: none;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+footer p {
+  font-size: 0.8em;
+}
+.collapsible {
+  color: black;
+  cursor: pointer;
+  padding: 1em 0 1em 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 0.8em;
+  border-bottom: 1px solid #d2d2d7;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: '\2715';
+}
+
+.content {
+  padding: 0 0.5em;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  border-bottom: 1px solid #d2d2d7;
+}
+.content a {
+  display: block;
+  font-size: 0.75em;
+  text-decoration: none;
+  color:#515154;
+  padding: 0.5em 0 0.5em 0;
+}
+
+.wrapper2 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 3em 2em 2em 1.5em 1.5em;
+}
+.wrapper2 p {
+  color:#515154;
+}
+.wrapper2 a {
+  color:#515154;
+  text-decoration: none;
+  font-size: 0.8em;
+  border-right: 1px solid #515154;
+  padding-right: 0.5em;
+
+}
+.one {
+  grid-column: 1 / 9;
+  grid-row: 1;
+}
+.two {
+  grid-column: 1 / 9;
+  grid-row: 2;
+}
+.three {
+  grid-column: 1 / 9;
+  grid-row: 3;
+}
+.four {
+  grid-column:1 / 4 ;
+  grid-row: 4;
+}
+.five {
+  grid-column: 3 / 5;
+  grid-row: 4;
+}
+.six {
+  grid-column: 5 / 8;
+  grid-row: 4;
+}
+.seven {
+  grid-row: 5;
+  grid-column: 1 / 3;
+
+}
+.eight {
+  grid-row: 5;
+  grid-column: 3 / 5;
+}
+
+@media screen and (min-width: 736px) {
+  main section:nth-of-type(3) ul {
+    grid-template-columns: repeat( 3, minmax(7em, 1fr) );
+  }
+  .wrapper {
+    margin: 1em;
+  }
+  .column1 {
+    flex: 1;
+    margin-right: 1em;
+  }
+  .column2 {
+    flex: 1;
+    margin-right: 1em;
+  }
+  .airpods {
+    height: 0.8em;
+  }
+  .fotos img:first-of-type{
+    display: none;
+  }
+
+  .fotos img:nth-of-type(2){
+
+    display: block;
+  }
+  .one {
+    grid-column: 1 / 9;
+    grid-row: 1;
+  }
+  .two {
+    grid-column: 8 / 9;
+    grid-row: 2;
+    text-align: right;
+  }
+  .three {
+    grid-column: 1 / 8;
+    grid-row: 2;
+  }
+  .four {
+    grid-column:1 / 2 ;
+    grid-row: 3;
+  }
+  .five {
+    grid-column: 2 / 3;
+    grid-row: 3;
+  }
+  .six {
+    grid-column: 3 / 4;
+    grid-row: 3;
+  }
+  .seven {
+    grid-row: 3;
+    grid-column: 4 / 5;
+
+  }
+  .eight {
+    grid-row: 3;
+    grid-column: 5 / 6;
+  }
+}
+@media screen and (min-width: 1068px) {
+  main section:nth-of-type(3) ul {
+    grid-template-columns: repeat( 6, minmax(7em, 1fr) );
+  }
+}
