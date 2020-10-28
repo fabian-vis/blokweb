@@ -380,9 +380,9 @@ main section:nth-of-type(2) p{
  margin-right: auto;
  color: #86868b;
  font-size: 0.9em;
-  line-height: 1.42859;
-  font-weight: 400;
-  letter-spacing: -.016em;
+ line-height: 1.42859;
+ font-weight: 400;
+ letter-spacing: -.016em;
 }
 
 main section:nth-of-type(2) a{
@@ -550,7 +550,6 @@ footer p {
   text-align: left;
   outline: none;
   font-size: 0.8em;
-  border-bottom: 1px solid #d2d2d7;
 }
 
 .collapsible:after {

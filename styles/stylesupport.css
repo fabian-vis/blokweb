@@ -602,7 +602,6 @@ footer p {
   text-align: left;
   outline: none;
   font-size: 0.8em;
-  border-bottom: 1px solid #dedede;
 }
 
 .collapsible:after {
