@@ -1,82 +1,430 @@
 <!doctype html>
 <html lang="en">
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="author" content="Fabian Vis">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Apple</title>
 	<link href="styles/stylesupport.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<header>
+
+<header>
+	<!-- Navigatiebalk-->
+  <a href="index.html">
+  	<img src="images/applelogo.png" alt="naar home">
+  </a>
+
+  <nav>
+
+		<button aria-label="menu">
+
+			<div id="burger1" class="burger1"></div>
+			<div id="burger2" class="burger2"></div>
+
+		</button>
 		<ul>
+
 			<li>
-				<button id="hamburgermenu" aria-label="menu">
-					<div id="burger1" class="burger1"></div>
-					<div id="burger2" class="burger2"></div>
-				</button>
+				<a href="#">
+					<form>
+						 <input type="search" placeholder="Search apple.com">
+					</form>
+				</a>
 			</li>
+
+    	<li>
+				<a href="#">Mac</a>
+			</li>
+
+      <li>
+				<a href="#">iPad</a>
+			</li>
+
+      <li>
+				<a href="#">iPhone</a>
+			</li>
+
+      <li>
+				<a href="#">Watch</a>
+			</li>
+
+      <li>
+				<a href="#">TV</a>
+			</li>
+
+      <li>
+				<a href="#">Music</a>
+			</li>
+
 			<li>
-				<img src="images/applelogo.png" alt="naar home"> <!-- apple logo link?-->
+				<a href="support.html">Support</a>
 			</li>
-			<li>
-				<img src="images/cart.svg" alt="naar winkelwagen">
-			</li>
-		</ul>
-		 <nav id="schuifmenu" class="klapmenuweg">
-			 <form>
-					<input type="search" aria-label="zoeken"><button type="submit">zoeken</button>
-			 </form>
-			 <ul>
-				 <li>menu1</li>
-				 <li>menu1</li>
-				 <li>menu1</li>
-				 <li>menu1</li>
-			 </ul>
-		</nav>
-	</header>
+
+    </ul>
+
+  </nav>
+
+		<a href="#">
+			<img src="images/searchicon.svg" alt="naar zoeken">
+		</a>
+
+		<a href="#">
+	  	<img src="images/cart.svg" alt="naar winkelwagen">
+	  </a>
+
+ </header>
+
 	<main>
-		<section>
-				<img src="images/supportheader.jpg" alt="foto van de support pagina">
-		</section>
-		<section>
+		<!-- Grote headerfoto section  -->
+		<section class="headerfoto">
+		<!-- Wordt alleen weergegeven bij schermen groter dan 735px-->
+		<div class="inputbar">
 			<h1>Welcome to Apple Support</h1>
 			<form>
-				 <input type="search" aria-label="zoeken"><button type="submit">zoeken</button>
+				 <input type="search" placeholder="Search Support">
 			</form>
-		</section>
-		<section>
-			<ul>
-				<li>
-					<img src="images/iphonelogo.png" alt="">
-					<h1>iPhone</h1>
-				</li>
-				<li>
-					<img src="images/ipadicon.png" alt="foto van de support pagina">
-					<h1>iPhone</h1>
-				</li>
-				<li>
-					<img src="images/ipadicon.png" alt="foto van de support pagina">
-					<h1>iPhone</h1>
-				</li>
-				<li>
-					<img src="images/ipadicon.png" alt="foto van de support pagina">
-					<h1>iPhone</h1>
-				</li>
-				<li>
-					<img src="images/ipadicon.png" alt="foto van de support pagina">
-					<h1>iPhone</h1>
-				</li>
-				<li>
-					<img src="images/ipadicon.png" alt="foto van de support pagina">
-					<h1>iPhone</h1>
-				</li>
-			</ul>
+
+		</div>
+
 		</section>
 
+		<section>
+			<!-- Wordt alleen weergegeven bij schermen kleiner dan 735px-->
+			<h1>Welcome to Apple Support</h1>
+			<form>
+				 <input type="search" placeholder="Search Support">
+			</form>
+
+		</section>
+
+		<section>
+			<!-- Apple producten icon section-->
+			<ul>
+
+				<li>
+					<img src="images/iphonelogo.png" alt="icon van een iphone">
+					<h1><a href="#">iPhone</a></h1>
+				</li>
+
+				<li>
+					<img src="images/maclogo.png" alt="icon van een mac">
+					<h1><a href="#">Mac</a></h1>
+				</li>
+
+				<li>
+					<img src="images/ipadicon.png" alt="icon van een ipad">
+					<h1><a href="#">iPad</a></h1>
+				</li>
+
+				<li>
+					<img src="images/watchicon.png" alt="icon van een apple watch">
+					<h1><a href="#">Watch</a></h1>
+				</li>
+
+				<li>
+					<img src="images/musicicon.png" alt="icon van apple music">
+					<h1><a href="#">Music</a></h1>
+				</li>
+
+				<li>
+					<img src="images/tvicon.png" alt="icon van apple tv">
+					<h1><a href="#">TV</a></h1>
+				</li>
+
+			</ul>
+
+		</section>
+
+		<section>
+			<!-- Support section-->
+				<section id="helpsections">
+					<img src="images/forgoticon.png" alt="icon van 3 puntjes met een pen"/>
+					<a href="#">Forgot Apple ID or Password ></a>
+				</section>
+
+				<section id="helpsections">
+					<img src="images/repairicon.png" alt="icon van een schroevendraaier"/>
+					<a href="#">Apple Repair ></a>
+				</section>
+
+				<section id="helpsections">
+					<img src="images/billingicon.png" alt="icon van een rekening"/>
+					<a href="#">Billing and Subcriptions ></a>
+				</section>
+
+		</section>
+
+		<section>
+			<!-- Update section-->
+			<div class="featuredrechts">
+				<img src="images/featured.jpg" alt="foto van ios14 homescherm"/>
+			</div>
+
+			<div class="featuredlinks">
+				<h1>Update to iOS 14 </h1>
+				<p>Add widgets to your Home Screen, automatically organize your apps, and have even more fun with Messages.</p>
+				<a href="#">Get iOS 14 ></a>
+			</div>
+
+		</section>
+
+		<section>
+			<!-- trade-in section-->
+			<div class="featuredrechts2">
+				<img src="images/featured2.jpg" alt="foto van apple producten"/>
+			</div>
+
+			<div class="featuredlinks2">
+				<h1>Trade in with Apple </h1>
+				<p>Turn an eligible device into credit towards a new one, or recycle it for free. Apple Trade In is good for you and the planet.</p>
+				<a href="#">Learn more ></a>
+			</div>
+
+		</section>
+
+		<section class="supportfoto">
+			<!-- get support section-->
+			<div class="supporttekst">
+				<h1>Get Support</h1>
+				<p>Choose a product and we'll find you the best solution</p>
+				<a href="#">Start now ></a>
+			</div>
+
+		</section>
+
+			<div class="supporttekst2">
+				<h1>Get Support</h1>
+				<p>Choose a product and we'll find you the best solution</p>
+				<a href="#">Start now ></a>
+			</div>
+
 </main>
+
 <footer>
-	<ul>
+
+	<div class="footerpc">
+		<ul>
+
+			<li>
+				<p>Shop and Learn</p>
+			</li>
+
+			<li>
+				<a href="page1">Mac</a>
+			</li>
+
+			<li>
+				<a href="page1">iPad</a>
+			</li>
+
+			<li>
+				<a href="page1">iPhone</a>
+			</li>
+
+			<li>
+				<a href="page1">Watch</a>
+			</li>
+
+			<li>
+				<a href="page1">TV</a>
+			</li>
+
+			<li>
+				<a href="page1">Music</a>
+			</li>
+
+			<li>
+				<a href="page1">AirPods</a>
+			</li>
+
+			<li>
+				<a href="page1">HomePod</a>
+			</li>
+
+			<li>
+				<a href="page1">iPod touch</a>
+			</li>
+			<li>
+				<a href="page1">Accessories</a>
+			</li>
+
+			<li>
+				<a href="page1">Gift Cards</a>
+			</li>
+
+		</ul>
+
+		<ul>
+
+			<li>
+				<p>Services</p>
+			</li>
+
+			<li>
+				<a href="page1">Apple Music</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple TV+</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple Fitness+</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple News+</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple Arcade</a>
+			</li>
+
+			<li>
+				<a href="page1">iCloud</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple One</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple Card</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple Books</a>
+			</li>
+
+			<li>
+				<a href="page1">App Store</a>
+			</li>
+
+			<li>
+				<p>Account</p>
+			</li>
+
+			<li>
+				<a href="page1">Manage Your Apple ID</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple Store Account</a>
+			</li>
+
+			<li>
+				<a href="page1">iCloud.com</a>
+			</li>
+
+		</ul>
+
+		<ul>
+
+			<li>
+				<p>Apple Store</p>
+			</li>
+			<li>
+				<a href="page1">Find a Store</a>
+			</li>
+			<li>
+				<a href="page1">Shop Online</a>
+			</li>
+			<li>
+				<a href="page1">Genius Bar</a>
+			</li>
+			<li>
+				<a href="page1">Today at Apple</a>
+			</li>
+			<li>
+				<a href="page1">Apple Camp</a>
+			</li>
+			<li>
+				<a href="page1">Apple Store App</a>
+			</li>
+			<li>
+				<a href="page1">Refurbished and Clearance</a>
+			</li>
+			<li>
+				<a href="page1">Financing</a>
+			</li>
+			<li>
+				<a href="page1">Apple Trade In</a>
+			</li>
+			<li>
+				<a href="page1">Order Status</a>
+			</li>
+			<li>
+				<a href="page1">Shopping Help</a>
+			</li>
+
+		</ul>
+
+		<ul>
+
+			<li>
+				<p>For Business</p>
+			</li>
+
+			<li>
+				<a href="page1">Apple and Business</a>
+			</li>
+
+			<li>
+				<a href="page1">Shop for Business</a>
+			</li>
+
+			<li>
+				<p>For Education</p>
+			</li>
+
+			<li>
+				<a href="page1">Apple and Education</a>
+			</li>
+
+			<li>
+				<a href="page1">Shop for K-12</a>
+			</li>
+
+			<li>
+				<a href="page1">Shop for College</a>
+			</li>
+
+			<li>
+				<p>For Healthcare</p>
+			</li>
+			<li>
+				<a href="page1">Apple in Healthcare</a>
+			</li>
+
+			<li>
+				<a href="page1">Health on Apple Watch</a>
+			</li>
+
+			<li>
+				<a href="page1">Health Records on iPhone</a>
+			</li>
+
+			<li>
+				<p>For Government</p>
+			</li>
+
+			<li>
+				<a href="page1">Shop for Government</a>
+			</li>
+
+			<li>
+				<a href="page1">Shop for Veterans and Military</a>
+			</li>
+
+		</ul>
+
+	</div><!-- Deze footer is alleen zichtbaar op een scherm groter dan 735px -->
+
+	<ul class="sitemap"><!-- Deze footer is alleen zichtbaar op een scherm kleiner dan 735px -->
 		<li>
 		<button type="button" class="collapsible">Shop and Learn</button>
 			<div class="content">
@@ -93,6 +441,7 @@
 				<a href="page1">Gift Cards</a>
 			</div>
 		</li>
+
 		<li>
 		<button type="button" class="collapsible">Services</button>
 			<div class="content">
@@ -105,6 +454,7 @@
 				<a href="page1">iCloud</a>
 			</div>
 		</li>
+
 		<li>
 		<button type="button" class="collapsible">Account</button>
 			<div class="content">
@@ -113,20 +463,27 @@
 				<a href="page1">iCloud.com</a>
 			</div>
 		</li>
-		<div class="wrapper2">
-		  <div class="one"><p>More ways to shop: Find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE.</p></div>
-		  <div class="two"><p>United States</p></div>
-		  <div class="three"><p>Copyright © 2020 Apple Inc. All rights reserved</p></div>
-		  <div class="four"><a href="page1">Privacy Policy</a></div>
-		  <div class="five"><a href="page1">Terms of Use</a></div>
-		  <div class="six"><a href="page1">Sales and Refund</a></div>
-			<div class="seven"><a href="page1">Legal</a></div>
-			<div class="eight"><a href="page1">Site Map</a></div>
-		</div>
+
 	</ul>
 
+		<!-- Dit wordt weergegeven onderaan de pagina -->
+		<p>More ways to shop: Find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE.</p>
+		<a href="#">United States</a>
+
+		<ul class="legal">
+			<li>Copyright © 2020 Apple Inc. All rights reserved</li>
+			<li>Privacy Policy  |</li>
+			<li>Terms of Use  |</li>
+			<li>Sales and Refund  |</li>
+			<li>Legal  |</li>
+			<li>Site Map  |</li>
+
+		</ul>
+
 </footer>
+
 <script src="scripts/script.js"></script>
+
 </body>
 
 </html>

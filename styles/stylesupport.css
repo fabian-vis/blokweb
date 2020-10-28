@@ -1,72 +1,73 @@
 /* CSS Document */
+
 *, *::after, *::before {
   box-sizing:border-box;
   font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
-body {
 
+body {
   margin: 0 auto;
 }
+/* Header styling voor de navigatiebalk */
 header {
-  position: sticky;
-  background-color: black;
-  top: 0;
-  left: 0;
-  right: 0;
   height: 2.5em;
-  margin: 0;
-  z-index: 100;
+  background-color:#1d1d1f;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  position:relative;
+  top:0;
+  z-index: 60;
 }
 
-header ul:first-of-type {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -0.5em;
+header a {
+  color:#f5f5f7;
+  text-decoration:none;
+}
+/*alle states */
+header a:focus {
+  background:Lightgrey;
 }
 
-header ul li:first-of-type {
-  margin-left: -2em;
+header a:active {
+  color:red;
+}
+header a:hover {
+  color:grey;
 }
 
-header ul li:nth-of-type(2){
-  color: white;
-  list-style-type: none;
+header > a:first-of-type {
+  padding: 0 .5em 0 .5em;
+  z-index: 50;
 }
 
-header ul li:nth-of-type(3){
-  color: white;
-  list-style-type: none;
-  margin: 0 0.7em 0em 0em;
+header > a:first-of-type img {
+  width: 1em;
 }
 
-header ul li {
-  color: white;
-  list-style-type: none;
+header > a:nth-of-type(2) {
+  display: none;
+  padding: 0 .5em 0 .5em;
 }
 
-header ul li:first-of-type img {
-  width: 2.5em;
-  border-radius: 50%;
+header > a:nth-of-type(2) img {
+  width:1.3em;
 }
 
-header ul li:nth-of-type(2) img {
-  width: 1.2em;
+header > a:last-of-type {
+  padding: 0 .5em 0 .5em;
 }
 
-header ul li:nth-of-type(3) img {
-  width: 1.2em;
+header > a:last-of-type img{
+  width:1em;
 }
 
+nav {
+  order:-1;
+}
 
-
-/* hamburger menu met transform naar kruis */
-
-#hamburgermenu {
+nav button {
   z-index: 50;
   height: 0.3em;
   width: 1.7em;
@@ -76,7 +77,37 @@ header ul li:nth-of-type(3) img {
   outline: none;
 }
 
-/* eerste streep van hamburger menu positioneren */
+nav ul {
+  margin:0;
+  padding:2.5em 0 0 0;
+  background-color:#1D1D1F;
+  list-style:none;
+  position:fixed;
+  left:0; right:0; top:0; bottom:0;
+  transform:translateY(-100%);
+  transition:.5s;
+  z-index:10;
+}
+
+nav.toonMenu ul {
+  transform:translateY(0);
+}
+
+header li {
+  margin:0; padding:0;
+}
+
+header li a {
+  display:block;
+  padding:1em 0 1em 0;
+  border-top:solid 1px #424245;
+  font-size: 0.9em;
+  margin: 0 2em 0 2em;
+}
+
+li.active a {
+  font-weight:bold;
+}
 
 .burger1 {
   top: -0.7em;
@@ -85,8 +116,58 @@ header ul li:nth-of-type(3) img {
   height: 0.15em;
   width: 1.4em;
   transition: 0.5s;
-
 }
+
+header ul li:nth-of-type(1) a {
+  margin: 0;
+  border-bottom:solid 1px #424245;
+  border-top:solid 0px #424245;
+}
+
+header ul li:nth-of-type(2) a {
+  border-top:solid 0px #424245;
+}
+
+header ul li:nth-of-type(1) input{
+  width: 95%;
+  margin: 0 0.5em 0 0.5em;
+  line-height:2.5em;
+  padding:0 1em;
+  color:#fff;
+  background-color:rgb(192,192,192, .2);
+  border:1px solid rgb(192,192,192, .2);
+  border-radius: .7em;
+  outline:none;
+  appearance:none;
+}
+
+header ul li:nth-of-type(1) input::placeholder{
+  color:#6E6E73;
+}
+
+header ul li:nth-of-type(1) input[type="search"] {
+  position:relative;
+  padding:0 1em 0 3em;
+  background-image:url("../images/searchicon.svg");
+  background-repeat:no-repeat;
+  background-size:1.5em auto;
+  background-position:.75em center;
+  transition:.25s;
+}
+
+header ul li:nth-of-type(1) input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  position:absolute;
+  width: 1em; height: 1em;
+  right:.75em;
+
+  background-image:url("../images/cancel.svg");
+  background-repeat:no-repeat;
+  background-size:1em auto;
+  background-position:center center;
+  cursor:pointer;
+}
+
 /* kruis class die door javascript wordt aangeroepen */
 .burger1kruis {
 transform: rotate(-50deg); /* rotate om het kruisje te vormen */
@@ -117,85 +198,401 @@ top: -0.3em;
   transition: 0.5s;
   top: -0.3em;
 }
-/* klapmenu aanmaken */
-.klapmenuweg {
-  position: fixed;
-  z-index: -1;
-  width: 100%;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: #00000010;
-  transition: .2s;
-  transform: translateY(-100%);
+/* Vanaf hier alle styling voor de sections*/
+/* alle states voor de main section*/
+main #helpsections a:focus {
+  background:Lightgrey;
 }
 
-.klapmenuzien {
-  transition: .2s;
-  background-color: #000000;
-  transform: translateY(2.5em);
+main #helpsections a:active {
+  color:red;
 }
 
-/* hier alle sections */
-main section:first-of-type img{
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+main #helpsections a:hover {
+  color:grey;
+  text-decoration: underline;
 }
+
+main section:nth-of-type(3) a:focus {
+  background:Lightgrey;
+}
+
+main section:nth-of-type(3) a:active {
+  color:red;
+}
+
+main section:nth-of-type(3) a:hover {
+  color:grey;
+  text-decoration: underline;
+}
+
+main section:nth-of-type(5) a:focus {
+  background:Lightgrey;
+}
+
+main section:nth-of-type(5) a:active {
+  color:red;
+}
+
+main section:nth-of-type(5) a:hover {
+  color:grey;
+  text-decoration: underline;
+}
+main section:nth-of-type(6) a:focus {
+  background:Lightgrey;
+}
+
+main section:nth-of-type(6) a:active {
+  color:red;
+}
+
+main section:nth-of-type(6) a:hover {
+  color:grey;
+  text-decoration: underline;
+}
+
+main .supporttekst a:focus {
+  background:Lightgrey;
+}
+
+main .supporttekst a:active {
+  color:red;
+}
+
+main .supporttekst a:hover {
+  color:grey;
+  text-decoration: underline;
+}
+
+main .supporttekst2 a:focus {
+  background:Lightgrey;
+}
+
+main .supporttekst2 a:active {
+  color:red;
+}
+
+main .supporttekst2 a:hover {
+  color:grey;
+  text-decoration: underline;
+}
+
+main .headerfoto {
+  width: 100%;
+  height: 278px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 50%; /* positioneren van de image */
+  background-image: url("../images/supportheader.jpg")
+}
+
+main .inputbar {
+  display: none;
+}
+
 main section:nth-of-type(2)  {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+}
+
+main section:nth-of-type(2) h1 {
+  font-size: 1.938em;
+  line-height: 1.0970341935;
+  font-weight: 500;
+  letter-spacing: .011em;
+  text-align: center;
+  margin: 1em;
+}
+
+main section:nth-of-type(2) form {
+  text-align: center;
+  width: 100%;
+}
+
+main section:nth-of-type(2) input{
+  width:80%;
+  max-width: 735px;
+  line-height:2.5em;
+  padding:0 1em;
+  color:#333;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 1em;
+  background-color:white;
+  border:1px solid #bbb;
+  border-radius: 0.188em;
+  outline:none;
+  appearance:none;
+}
+
+main section:nth-of-type(2) input::placeholder {
+  color:#bbb;
+}
+
+main section:nth-of-type(2) input[type="search"] {
+  position:relative;
+  padding:0 1em 0 3em;
+  background-image:url("../images/searchicon.svg");
+  background-repeat:no-repeat;
+  background-size:1.5em auto;
+  background-position:.75em center;
+  transition:.25s;
+}
+
+main section:nth-of-type(2) input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  position:absolute;
+  width: 1em; height: 1em;
+  right:.75em;
+  background-image:url("../images/cancel.svg");
+  background-repeat:no-repeat;
+  background-size:1em auto;
+  background-position:center center;
+  cursor:pointer;
 }
 /* icon sections */
+main section:nth-of-type(3) {
+  border-bottom: 1px solid #dedede;
+}
+
 main section:nth-of-type(3) ul {
   list-style:none;
-  margin:0; padding:0 2em 2em;
+  margin:0;
+  padding:2em 2em 2em 2em;
   display:grid;
   grid-gap:2em;
   grid-template-columns: repeat( 2, minmax(7em, 1fr) );
 }
 
 main section:nth-of-type(3) li {
-  padding: 1em;
+  padding: 1.5em;
   position:relative;
   display:flex;
   flex-direction:column;
-  justify-content:flex-end;
+  justify-content:center;
   align-items: center;
 }
 main section:nth-of-type(3) img {
-  display:block;
   width:4.250em;
   height:auto;
 }
+
 main section:nth-of-type(3) h1 {
-  font-size: 1em;
-}
- footer{
- margin: 0 auto;
+  font-size: 1.063em;
+  line-height: 1.5294717647;
+  font-weight: 400;
+  letter-spacing: -0.021em;
+  color: #333;
 }
 
-footer ul {
-  background-color: #f5f5f7;
-  padding-right: 1em;
-  padding-left: 1em;
+main section:nth-of-type(3) a {
+  text-decoration: none;
+  color: #333;
+}
+/* Help sections */
+main section:nth-of-type(4) {
+  border-bottom: 1px solid #dedede;
+}
+
+main #helpsections {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #dedede;
+  margin: 0 3.75em;
+  padding: 1.5em;
+}
+
+main #helpsections img {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+main #helpsections a {
+  margin-top: 1em;
+  color: #2997ff;
+  text-decoration: none;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-size: .9375rem;
+}
+
+main #helpsections:last-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 0px solid #dedede;
+  margin: 0 3.75em;
+  padding: 1.5em;
+}
+/* featured section */
+main section:nth-of-type(5) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 470px;
+  justify-content: center;
+  border-bottom: 1px solid #dedede;
+}
+
+main section:nth-of-type(5) img {
+  width: 25em;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+main section:nth-of-type(5) h1 {
+  margin: 1em 0em .28em 0em;
+  font-size: 1.750em;
+  line-height: 1.1073028571;
+  font-weight: 500;
+  letter-spacing: .012em;
+  color: #333;
+}
+
+main section:nth-of-type(5) p {
+  margin: 0em 0em .28em 0em;
+  font-size: 1.188em;
+  line-height: 1.4738442105;
+  font-weight: 300;
+  letter-spacing: .018em;
+  color: #333;
+  max-width: 45.938em;
+}
+
+main section:nth-of-type(5) a {
+  margin: 0.813em 0em 0em 0em;
+  color: #2997ff;
+  text-decoration: none;
+  font-size: 1.188em;
+  line-height: 1.4738442105;
+  font-weight: 300;
+  letter-spacing: .018em;
+}
+/* exact hetzelfde maar dan voor de section eronder */
+main section:nth-of-type(6) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 470px;
+  justify-content: center;
+  border-bottom: 1px solid #dedede;
+}
+
+main section:nth-of-type(6) img {
+  width: 25em;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+main section:nth-of-type(6) h1 {
+  margin: 1em 0em .28em 0em;
+  font-size: 1.750em;
+  line-height: 1.1073028571;
+  font-weight: 500;
+  letter-spacing: .012em;
+  color: #333;
+}
+
+main section:nth-of-type(6) p {
+  margin: 0em 0em .28em 0em;
+  font-size: 1.188em;
+  line-height: 1.4738442105;
+  font-weight: 300;
+  letter-spacing: .018em;
+  color: #333;
+  max-width: 41.438em;
+  padding: 0 0.3em 0 0.3em;
+}
+
+main section:nth-of-type(6) a {
+  margin: 0.813em 0em 0em 0em;
+  color: #2997ff;
+  text-decoration: none;
+  font-size: 1.188em;
+  line-height: 1.4738442105;
+  font-weight: 300;
+  letter-spacing: .018em;
+}
+
+main .supportfoto {
+  width: 100%;
+  height: 320px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 50%; /* positioneren van de image */
+  background-image: url("../images/supportfotosmallscreen.jpg")
+}
+/* supporttekst niet laten zien */
+main .supporttekst {
+  display: none;
+}
+
+main .supporttekst2 {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 1em;
+  border-bottom: 1px solid #dedede;
+}
+
+main .supporttekst2 h1 {
+  font-size: 28px;
+  line-height: 1.1073028571;
+  font-weight: 500;
+  letter-spacing: .012em;
+  margin-bottom: 12px;
+}
+
+main .supporttekst2 p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5294717647;
+  font-weight: 400;
+  letter-spacing: -0.021em;
+}
+
+main .supporttekst2 a {
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 1.5294717647;
+  font-weight: 400;
+  letter-spacing: -0.021em;
+  color: #0070c9;
+  margin-bottom: 1em;
+}
+/* Footer style */
+footer{
+color: #515154;
+background-color: #f5f5f7;
+margin: 0 auto;
+}
+
+footer ul.sitemap {
+ padding-right: 1em;
+ padding-left: 1em;
+ display: flex;
+ flex-direction: column;
 }
 
 footer li {
-  margin: 0;
-  list-style-type: none;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+ margin: 0;
+ list-style-type: none;
+ padding-top: 0.5em;
+ padding-bottom: 0.5em;
 }
 
 footer p {
-  font-size: 0.8em;
+ font-size: 0.8em;
 }
+
 .collapsible {
   color: black;
   cursor: pointer;
@@ -205,7 +602,7 @@ footer p {
   text-align: left;
   outline: none;
   font-size: 0.8em;
-  border-bottom: 1px solid #d2d2d7;
+  border-bottom: 1px solid #dedede;
 }
 
 .collapsible:after {
@@ -227,6 +624,7 @@ footer p {
   transition: max-height 0.3s ease-out;
   border-bottom: 1px solid #d2d2d7;
 }
+
 .content a {
   display: block;
   font-size: 0.75em;
@@ -235,119 +633,505 @@ footer p {
   padding: 0.5em 0 0.5em 0;
 }
 
-.wrapper2 {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 3em 2em 2em 1.5em 1.5em;
-}
-.wrapper2 p {
-  color:#515154;
-}
-.wrapper2 a {
-  color:#515154;
-  text-decoration: none;
+footer > p {
   font-size: 0.8em;
-  border-right: 1px solid #515154;
-  padding-right: 0.5em;
+  padding: 0em 1em;
+}
 
+footer > a {
+  font-size: 0.8em;
+  padding: 0em 1em;
+  color: #515154;
+  text-decoration: none;
 }
-.one {
-  grid-column: 1 / 9;
-  grid-row: 1;
-}
-.two {
-  grid-column: 1 / 9;
-  grid-row: 2;
-}
-.three {
-  grid-column: 1 / 9;
-  grid-row: 3;
-}
-.four {
-  grid-column:1 / 4 ;
-  grid-row: 4;
-}
-.five {
-  grid-column: 3 / 5;
-  grid-row: 4;
-}
-.six {
-  grid-column: 5 / 8;
-  grid-row: 4;
-}
-.seven {
-  grid-row: 5;
-  grid-column: 1 / 3;
 
+footer ul.legal {
+  flex-wrap: wrap;
+  display: flex;
+  grid-row-start: 3;
+  padding: 0em 0em 0em 1em;
 }
-.eight {
-  grid-row: 5;
-  grid-column: 3 / 5;
+
+footer ul.legal li {
+  font-size: 0.8em;
+  padding-right: 0.7em;
+  padding-left: 0;
+}
+/* footerpc variant ontzichtbaar */
+footer .footerpc {
+  display: none;
 }
 
 @media screen and (min-width: 736px) {
-  main section:nth-of-type(3) ul {
-    grid-template-columns: repeat( 3, minmax(7em, 1fr) );
+  /* Alle styling voor schermen vanaf 736px */
+  /* Navigatie voor pc styling */
+  header {
+    justify-content:center;
   }
-  .wrapper {
-    margin: 1em;
+
+  nav {
+    order:0;
   }
-  .column1 {
-    flex: 1;
-    margin-right: 1em;
+
+  nav button {
+    display:none;
   }
-  .column2 {
-    flex: 1;
-    margin-right: 1em;
+
+  nav ul {
+    position:relative;
+    padding:0;
+    transform:none;
+    background:none;
+    display:flex;
   }
-  .airpods {
-    height: 0.8em;
+
+  nav a {
+    border:none;
   }
-  .fotos img:first-of-type{
+  header > a:nth-of-type(2) {
+    display: flex;
+    padding: 0 .5em 0 .5em;
+  }
+  header li a {
+    display:block;
+    padding:1em 1em 1em 1em;
+    background-size:auto 2em;
+    background-position:1em center;
+    background-repeat:no-repeat;
+    border-top:solid 1px #424245;
+    font-size: 0.9em;
+    margin: 0 .7em 0 .7em;
+  }
+
+  nav ul li:nth-of-type(1){
     display: none;
   }
 
-  .fotos img:nth-of-type(2){
+  /* foto blijft gecenterd */
+  main .headerfoto {
+    width: 100%;
+    height: 480px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 50%; /* positioneren van de image */
+    background-image: url("../images/supportheader.jpg")
+  }
+  /* searchbar in de foto laten verschijnen */
+  main .inputbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    display: block;
+  main .inputbar form {
+    text-align: center;
   }
-  .one {
-    grid-column: 1 / 9;
-    grid-row: 1;
+  main .inputbar input{
+    width:577px;
+    max-width: 735px;
+    line-height:3em;
+    padding:0 1em;
+    color:#333;
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 1em;
+    background-color:white;
+    border:1px solid #bbb;
+    border-radius: 0.188em;
+    outline:none;
+    appearance:none;
   }
-  .two {
-    grid-column: 8 / 9;
-    grid-row: 2;
-    text-align: right;
+
+  main .inputbar input::placeholder {
+    color:#bbb;
   }
-  .three {
-    grid-column: 1 / 8;
-    grid-row: 2;
+
+  main .inputbar input[type="search"] {
+    position:relative;
+    padding:0 1em 0 3em;
+    background-image:url("../images/searchicon.svg");
+    background-repeat:no-repeat;
+    background-size:1.5em auto;
+    background-position:.75em center;
+    transition:.25s;
   }
-  .four {
-    grid-column:1 / 2 ;
-    grid-row: 3;
+
+  main .inputbar input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    position:absolute;
+    width: 1em; height: 1em;
+    right:.75em;
+    background-image:url("../images/cancel.svg");
+    background-repeat:no-repeat;
+    background-size:1em auto;
+    background-position:center center;
+    cursor:pointer;
   }
-  .five {
+  /* andere searchbar weghalen */
+  main .inputbar h1 {
+    font-size: 2.5em;
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: .008em;
+  }
+
+  main section:nth-of-type(2) {
+    display: none;
+  }
+  /* Grid max 3 op een row weergegeven met een minimale breedte van 7em en max 1 Fraction unit */
+  main section:nth-of-type(3) ul {
+    grid-template-columns: repeat( 3, minmax(7em, 1fr) );
+  }
+  /* supporttekst weghalen voor grote schermen */
+  main .supporttekst2 {
+    display: none;
+  }
+  /* tekst in foto weergeven op grote schermen */
+  main .supporttekst {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 1em;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main .supporttekst h1 {
+    font-size: 34px;
+    line-height: 1.0882352941;
+    font-weight: 500;
+    letter-spacing: .01em;
+    margin-top: 3em;
+    margin-bottom: 12px;
+    color: #fff;
+  }
+  main .supporttekst p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.5294717647;
+    font-weight: 400;
+    letter-spacing: -0.021em;
+    color: #fff;
+    max-width: 280px;
+  }
+
+  main .supporttekst a {
+    margin-top: 1em;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 1.5294717647;
+    font-weight: 400;
+    letter-spacing: -0.021em;
+    color: #6BF;
+    margin-bottom: 1em;
+  }
+
+  main .supportfoto {
+    height: 349px;
+    background-image: url("../images/supportfoto.jpg");
+    margin-bottom: 1em;
+  }
+  /* footer styling */
+  footer .footerpc a:focus {
+    background:Lightgrey;
+  }
+
+  footer .footerpc a:active {
+    color:red;
+  }
+
+  footer .footerpc a:hover {
+    color:grey;
+    text-decoration: underline;
+  }
+  footer a:focus {
+    background:Lightgrey;
+  }
+
+  footer a:active {
+    color:red;
+  }
+
+  footer a:hover {
+    color:grey;
+    text-decoration: underline;
+  }
+  footer {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+  }
+  footer ul.sitemap {
+    grid-column: 1 / -1;
+  }
+
+  footer > p {
+    padding: 1em 0;
+    border-bottom: solid 1px #515154;
+    grid-column: 1 / -1;
+  }
+
+  footer p.copyright {
+    grid-column: 1 / 2;
+    grid-row-start: 3;
+  }
+
+  footer > a {
     grid-column: 2 / 3;
-    grid-row: 3;
   }
-  .six {
-    grid-column: 3 / 4;
-    grid-row: 3;
-  }
-  .seven {
-    grid-row: 3;
-    grid-column: 4 / 5;
 
+  footer ul.legal {
+    flex-wrap: wrap;
+    display: flex;
+    grid-row-start: 3;
+    margin: 0;
+    padding: 0em;
   }
-  .eight {
-    grid-row: 3;
-    grid-column: 5 / 6;
+  footer ul.sitemap {
+    display: none;
+  }
+  /* featured section font size aanpassen  */
+  main section:nth-of-type(5) h1 {
+    font-size: 2.125em;
+  }
+  main section:nth-of-type(5) p {
+    font-size: 1.250em;
+    max-width: 736px;
+  }
+
+  main section:nth-of-type(5) a {
+    font-size: 1.250em;
+  }
+ /* exact hetzelfde maar dan voor de section eronder */
+  main section:nth-of-type(6) h1 {
+    font-size: 2.125em;
+  }
+
+  main section:nth-of-type(6) p {
+    font-size: 1.250em;
+  }
+
+  main section:nth-of-type(6) a {
+    font-size: 1.250em;
+  }
+  /* footer responsive */
+  footer .footerpc {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 980px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  footer .footerpc ul {
+    list-style: none;
+  }
+
+  footer .footerpc ul:first-of-type {
+    padding-left: 0;
+  }
+
+  footer .footerpc li {
+    padding: 0;
+   margin-bottom: .8em;
+  }
+
+  footer .footerpc p {
+    font-size: 12px;
+    line-height: 1.33337;
+    letter-spacing: -.01em;
+    font-weight: 600;
+    margin-top: 3em;
+    margin-right: 20px;
+    margin-bottom: .8em;
+  }
+
+  footer .footerpc a {
+    color: #515154;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-align: inherit;
   }
 }
 @media screen and (min-width: 1068px) {
+  /* foto ietsje groter en styling */
+  main .headerfoto {
+    width: 100%;
+    height: 540px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 50%; /* positioneren van de image */
+    background-image: url("../images/supportheader.jpg")
+  }
   main section:nth-of-type(3) ul {
     grid-template-columns: repeat( 6, minmax(7em, 1fr) );
+    padding:4em 10em 4em 10em;
   }
+  /* inputbar ietsje groter */
+  main .inputbar input{
+    width:654px;
+  }
+  /* supportfoto ietsje groter */
+  main .supportfoto {
+    height: 430px;
+    background-image: url("../images/supportfoto.jpg")
+  }
+
+  main .inputbar h1 {
+    margin-top: 1.5em;
+    font-size: 3em;
+    line-height: 1.0416666667;
+    font-weight: 500;
+    letter-spacing: .006em;
+  }
+  /* andere searchbar weghalen */
+  main section:nth-of-type(4) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 1px solid #dedede;
+  }
+  /* help sectie styling groter scherm */
+  main #helpsections {
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #dedede;
+    border-bottom: 0px solid #dedede;
+    margin: 3.75em 0em;
+    padding: 0em 3.75em;
+  }
+
+  main #helpsections:last-of-type {
+    flex-direction: column;
+    align-items: center;
+    border-right: 0px solid #dedede;
+    border-bottom: 0px solid #dedede;
+    margin: 3.75em 0em;
+    padding: 0em 3.75em;
+  }
+
+  main #helpsections img {
+    width: 2.5em;
+    height: 2.5em;
+  }
+
+  main #helpsections a {
+    margin-top: 1em;
+    color: #2997ff;
+    text-decoration: none;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    font-size: .9375rem;
+  }
+
+  main section:nth-of-type(5) {
+    flex-direction: row;
+    text-align: left;
+    height:307px;
+  }
+
+  .featuredrechts {
+    order: 1;
+    height: 13.063em;
+  }
+
+  .featuredlinks {
+    max-width: 408px;
+    height: 13.063em;
+  }
+
+/* featured sections aanpassen */
+
+  main section:nth-of-type(5) img {
+    width: 25em;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  main section:nth-of-type(5) h1 {
+    margin: 0em 0em .28em 0em;
+    font-size: 2.500em;
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: .008em;
+    color: #333;
+  }
+
+  main section:nth-of-type(5) p {
+    margin: 0em 0em 1.500em 0em;
+    font-size: 1.375em;
+    line-height: 1.4545454545;
+    font-weight: 300;
+    letter-spacing: .016em;
+    color: #333;
+  }
+
+  main section:nth-of-type(5) a {
+    margin: 0em 0em 0em 0em;
+    color: #2997ff;
+    text-decoration: none;
+    font-size: 1.375em;
+    line-height: 1.4545454545;
+    font-weight: 300;
+    letter-spacing: .016em;
+  }
+  /* exact hetzelfde maar dan voor de section eronder */
+  main section:nth-of-type(6) {
+    flex-direction: row;
+    text-align: left;
+    height:307px;
+  }
+
+  .featuredrechts2 {
+    height: 13.063em;
+  }
+
+  .featuredlinks2 {
+    max-width: 470px;
+    height: 13.063em;
+  }
+
+  main section:nth-of-type(6) img {
+    width: 25em;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  main section:nth-of-type(6) h1 {
+    margin: 0em 0em .28em 0em;
+    font-size: 2.500em;
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: .008em;
+    color: #333;
+  }
+
+  main section:nth-of-type(6) p {
+    margin: 0em 0em 1.5em 0em;
+    font-size: 1.375em;
+    line-height: 1.4545454545;
+    font-weight: 300;
+    letter-spacing: .016em;
+    color: #333;
+  }
+
+  main section:nth-of-type(6) a {
+    margin: 0em 0em 0em 0em;
+    color: #2997ff;
+    text-decoration: none;
+    font-size: 1.375em;
+    line-height: 1.4545454545;
+    font-weight: 300;
+    letter-spacing: .016em;
+  }
+
 }

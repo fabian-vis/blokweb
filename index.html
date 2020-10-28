@@ -1,108 +1,412 @@
 <!doctype html>
 <html lang="en">
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="author" content="Fabian Vis">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Apple</title>
 	<link href="styles/style.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<header>
+
+<header>
+	<!-- Navigatiebalk-->
+  <a href="index.html">
+  	<img src="images/applelogo.png" alt="naar home">
+  </a>
+
+  <nav>
+
+		<button aria-label="menu">
+
+			<div id="burger1" class="burger1"></div>
+			<div id="burger2" class="burger2"></div>
+
+		</button>
 		<ul>
+
 			<li>
-				<button id="hamburgermenu" aria-label="menu">
-					<div id="burger1" class="burger1"></div>
-					<div id="burger2" class="burger2"></div>
-				</button>
+				<a href="#">
+					<form>
+						 <input type="search" placeholder="Search apple.com">
+					</form>
+				</a>
 			</li>
+
+    	<li>
+				<a href="#">Mac</a>
+			</li>
+
+      <li>
+				<a href="#">iPad</a>
+			</li>
+
+      <li>
+				<a href="#">iPhone</a>
+			</li>
+
+      <li>
+				<a href="#">Watch</a>
+			</li>
+
+      <li>
+				<a href="#">TV</a>
+			</li>
+
+      <li>
+				<a href="#">Music</a>
+			</li>
+
 			<li>
-				<img src="images/applelogo.png" alt="naar home"> <!-- apple logo link?-->
+				<a href="support.html">Support</a>
 			</li>
-			<li>
-				<img src="images/cart.svg" alt="naar winkelwagen">
-			</li>
-		</ul>
-		 <nav id="schuifmenu" class="klapmenuweg">
-			 <form>
-					<input type="search" aria-label="zoeken"><button type="submit">zoeken</button>
-			 </form>
-			 <ul>
-				 <li>menu1</li>
-				 <li>menu1</li>
-				 <li>menu1</li>
-				 <li>menu1</li>
-			 </ul>
-		</nav>
-	</header>
-	<main>
+
+    </ul>
+
+  </nav>
+
+		<a href="#">
+			<img src="images/searchicon.svg" alt="naar zoeken">
+		</a>
+
+		<a href="#">
+	  	<img src="images/cart.svg" alt="naar winkelwagen">
+	  </a>
+
+</header>
+
+<main>
 
 	<section>
-			<h1>iPhone SE</h1> <!-- h1 -->
-			<h2> Lots to love. Less to spend. Starting at $399. </h2><!-- h2-->
+
+			<h1>iPhone SE</h1>
+			<h2> Lots to love. Less to spend. Starting at $399. </h2>
 			<p> From $9.54/mo. or $299 with trade-in. </p>
+			<!-- ik heb hier een div gebruikt omdat ik dat als advies kreeg van de student assistenten -->
+			<!-- ik wilde de 2 linkjes naast elkaar plaatsen -->
 			<div class="linkjes">
+
 				<div class="link1">
 					<a href="page1">Learn more ></a>
 				</div>
+
 				<div class="link2">
 					<a href="page2">Buy ></a>
 				</div>
-			</div>
-	</section>
 
+			</div>
+
+	</section>
+  <!-- Dit zijn de foto's met -->
 	<div class="fotos">
-		<img src="images/iphonemobilehero.jpg" class="mobilefoto"/>
-		<img src="images/iphonedesktop.jpg" class="desktopfoto" />
+		<img src="images/iphonemobilehero.jpg" class="mobilefoto" alt="staande foto van iphone SE"/>
+		<img src="images/iphonedesktop.jpg" class="desktopfoto" alt="liggende foto van iphone SE" />
 	</div>
 
 	<section>
+
 			<h1>iPhone 11</h1>
 			<h2> Just the right amount of everything. </h2>
 			<p> From $19.95/mo. or $479 with trade-in. </p>
+
 			<div class="linkjes">
+
 				<div class="link1">
 					<a href="page1">Learn more ></a>
 				</div>
+
 				<div class="link2">
 					<a href="page2">Buy ></a>
 				</div>
+
 			</div>
+
 	</section>
 
 	<section>
-		<img src="images/iphone11.jpg">
+
+		<img src="images/iphone11.jpg" alt="foto van 7 verschillende kleuren iphone 11's">
+
 	</section>
 
 	<div class='wrapper'>
+
   <div class='row'>
+
     <div class='column1'>
+
       <div class='appleevent'>
         <h1>Apple Event</h1>
 				<h2>Watch the event on 9/15 at 10 a.m. PDT.</h2>
 				<a href="page1">Learn more ></a>
       </div>
 			<figure>
-				<img src="images/Appleevent.jpg">
+				<img src="images/Appleevent.jpg" alt="foto van het apple event">
 			</figure>
+
     </div>
 
     <div class='column2'>
+
       <div class='airpods'>
+
 				<h1>Buy a Mac or iPad for college. Get AirPods.</h1>
 				<a href="page1">Shop ></a>
 			</div>
 			<figure>
-				<img src="images/Airpods.jpg">
+				<img src="images/Airpods.jpg" alt="foto van het airpods event">
 			</figure>
+
       </div>
+
     </div>
+
   </div>
-</div>
+
 
 </main>
+
 <footer>
-	<ul>
+
+	<div class="footerpc">
+
+		<ul>
+
+			<li>
+				<p>Shop and Learn</p>
+			</li>
+
+			<li>
+				<a href="page1">Mac</a>
+			</li>
+
+			<li>
+				<a href="page1">iPad</a>
+			</li>
+
+			<li>
+				<a href="page1">iPhone</a>
+			</li>
+
+			<li>
+				<a href="page1">Watch</a>
+			</li>
+
+			<li>
+				<a href="page1">TV</a>
+			</li>
+
+			<li>
+				<a href="page1">Music</a>
+			</li>
+
+			<li>
+				<a href="page1">AirPods</a>
+			</li>
+
+			<li>
+				<a href="page1">HomePod</a>
+			</li>
+
+			<li>
+				<a href="page1">iPod touch</a>
+			</li>
+			<li>
+				<a href="page1">Accessories</a>
+			</li>
+
+			<li>
+				<a href="page1">Gift Cards</a>
+			</li>
+
+		</ul>
+
+		<ul>
+
+			<li>
+				<p>Services</p>
+			</li>
+
+			<li>
+				<a href="page1">Apple Music</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple TV+</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple Fitness+</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple News+</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple Arcade</a>
+			</li>
+
+			<li>
+				<a href="page1">iCloud</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple One</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple Card</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple Books</a>
+			</li>
+
+			<li>
+				<a href="page1">App Store</a>
+			</li>
+
+			<li>
+				<p>Account</p>
+			</li>
+
+			<li>
+				<a href="page1">Manage Your Apple ID</a>
+			</li>
+
+			<li>
+				<a href="page1">Apple Store Account</a>
+			</li>
+
+			<li>
+				<a href="page1">iCloud.com</a>
+			</li>
+
+		</ul>
+
+		<ul>
+
+			<li>
+				<p>Apple Store</p>
+			</li>
+			<li>
+				<a href="page1">Find a Store</a>
+			</li>
+			<li>
+				<a href="page1">Shop Online</a>
+			</li>
+			<li>
+				<a href="page1">Genius Bar</a>
+			</li>
+			<li>
+				<a href="page1">Today at Apple</a>
+			</li>
+			<li>
+				<a href="page1">Apple Camp</a>
+			</li>
+			<li>
+				<a href="page1">Apple Store App</a>
+			</li>
+			<li>
+				<a href="page1">Refurbished and Clearance</a>
+			</li>
+			<li>
+				<a href="page1">Financing</a>
+			</li>
+			<li>
+				<a href="page1">Apple Trade In</a>
+			</li>
+			<li>
+				<a href="page1">Order Status</a>
+			</li>
+			<li>
+				<a href="page1">Shopping Help</a>
+			</li>
+
+		</ul>
+
+		<ul>
+
+			<li>
+				<p>For Business</p>
+			</li>
+
+			<li>
+				<a href="page1">Apple and Business</a>
+			</li>
+
+			<li>
+				<a href="page1">Shop for Business</a>
+			</li>
+
+			<li>
+				<p>For Education</p>
+			</li>
+
+			<li>
+				<a href="page1">Apple and Education</a>
+			</li>
+
+			<li>
+				<a href="page1">Shop for K-12</a>
+			</li>
+
+			<li>
+				<a href="page1">Shop for College</a>
+			</li>
+
+			<li>
+				<p>For Healthcare</p>
+			</li>
+			<li>
+				<a href="page1">Apple in Healthcare</a>
+			</li>
+
+			<li>
+				<a href="page1">Health on Apple Watch</a>
+			</li>
+
+			<li>
+				<a href="page1">Health Records on iPhone</a>
+			</li>
+
+			<li>
+				<p>For Government</p>
+			</li>
+
+			<li>
+				<a href="page1">Shop for Government</a>
+			</li>
+
+			<li>
+				<a href="page1">Shop for Veterans and Military</a>
+			</li>
+
+		</ul>
+
+		<ul>
+			<li><p>Apple Values</p></li>
+			<li><a href="page1">Accessibility</a></li>
+			<li><a href="page1">Education</a></li>
+			<li><a href="page1">Environment</a></li>
+			<li><a href="page1">Inclusion and Diversity</a></li>
+			<li><a href="page1">Privacy</a></li>
+			<li><a href="page1">Supplier Responsibility</a></li>
+			<li><p>About Apple</p></li>
+			<li><a href="page1">Newsroom</a></li>
+			<li><a href="page1">Apple Leadership</a></li>
+			<li><a href="page1">Job Opportunities</a></li>
+			<li><a href="page1">Investors</a></li>
+			<li><a href="page1">Events</a></li>
+			<li><a href="page1">Contact Apple</a></li>
+		</ul>
+	</div><!-- Deze footer is alleen zichtbaar op een scherm groter dan 735px -->
+
+	<ul class="sitemap"><!-- Deze footer is alleen zichtbaar op een scherm kleiner dan 735px -->
 		<li>
 		<button type="button" class="collapsible">Shop and Learn</button>
 			<div class="content">
@@ -119,6 +423,7 @@
 				<a href="page1">Gift Cards</a>
 			</div>
 		</li>
+
 		<li>
 		<button type="button" class="collapsible">Services</button>
 			<div class="content">
@@ -131,6 +436,7 @@
 				<a href="page1">iCloud</a>
 			</div>
 		</li>
+
 		<li>
 		<button type="button" class="collapsible">Account</button>
 			<div class="content">
@@ -139,20 +445,27 @@
 				<a href="page1">iCloud.com</a>
 			</div>
 		</li>
-		<div class="wrapper2">
-		  <div class="one"><p>More ways to shop: Find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE.</p></div>
-		  <div class="two"><p>United States</p></div>
-		  <div class="three"><p>Copyright © 2020 Apple Inc. All rights reserved</p></div>
-		  <div class="four"><a href="page1">Privacy Policy</a></div>
-		  <div class="five"><a href="page1">Terms of Use</a></div>
-		  <div class="six"><a href="page1">Sales and Refund</a></div>
-			<div class="seven"><a href="page1">Legal</a></div>
-			<div class="eight"><a href="page1">Site Map</a></div>
-		</div>
+
 	</ul>
 
+		<!-- Dit wordt weergegeven onderaan de pagina -->
+		<p>More ways to shop: Find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE.</p>
+		<a href="#">United States</a>
+
+		<ul class="legal">
+			<li>Copyright © 2020 Apple Inc. All rights reserved</li>
+			<li>Privacy Policy  |</li>
+			<li>Terms of Use  |</li>
+			<li>Sales and Refund  |</li>
+			<li>Legal  |</li>
+			<li>Site Map  |</li>
+
+		</ul>
+
 </footer>
+
 <script src="scripts/script.js"></script>
+
 </body>
 
 </html>

@@ -1,13 +1,13 @@
+var hamburger = document.querySelector("nav button");
+var navigatie = document.querySelector("nav");
 
-var burgermenu = document.querySelector('#hamburgermenu');
-function burgerMenuKlikken() {
+function toggleMenu() {
   document.querySelector('#burger1').classList.toggle('burger1kruis');
   document.querySelector('#burger2').classList.toggle('burger2kruis');
-  document.querySelector('#schuifmenu').classList.toggle('klapmenuzien');
+  navigatie.classList.toggle('toonMenu');
 }
-burgermenu.addEventListener("click", burgerMenuKlikken);
 
-
+hamburger.addEventListener("click", toggleMenu);
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_symbol //
 var coll = document.getElementsByClassName("collapsible");
 var i;
